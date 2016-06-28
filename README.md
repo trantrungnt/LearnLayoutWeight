@@ -52,6 +52,30 @@
 </LinearLayout>
 ```
 
++ Chia LinearLayout cha theo chiều with thành 2 phần bằng nhau (weight_sum = 2). Đồng thời, các nút Button trong LinearLayout cha mỗi thằng chiếm 1 phần theo chiều width
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="button1" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="button2" />
+
+</LinearLayout>
+```
 
 ##Tham khảo
 + [Các trường hợp sử dụng thuộc tính Layout_Weight trong LinearLayout](http://dulieu.tailieuhoctap.vn/books/cong-nghe-thong-tin/lap-trinh-di-dong/file_goc_778780.pdf)
